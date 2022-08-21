@@ -1,14 +1,11 @@
-const { resolve, } = require('path')
+const { resolve } = require('path');
 module.exports = {
-  "stories": [
-    "../src/**/*.stories.mdx",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)"
-  ],
-  "addons": [
+  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  addons: [
     'storybook-addon-themes',
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
     {
       name: '@storybook/addon-postcss',
       options: {
@@ -21,13 +18,12 @@ module.exports = {
   features: {
     storyStoreV7: true,
   },
-  "framework": "@storybook/react",
-  "webpackFinal": (config) => {
+  framework: '@storybook/react',
+  webpackFinal: (config) => {
     config.resolve.alias = {
       ...config.resolve?.alias,
-      '@': [resolve(__dirname, '../src/'), resolve(__dirname, '../')],
-    }
+      '@': resolve(__dirname, '../src/'),
+    };
     return config;
-  }
-
-}
+  },
+};
