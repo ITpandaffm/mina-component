@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.16.0",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/material": "^5.10.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -151,6 +154,7 @@
     "@storybook/builder-webpack5": "^6.5.10",
     "@storybook/manager-webpack5": "^6.5.10",
     "@storybook/react": "^6.5.10",
-    "@storybook/testing-library": "^0.0.13"
+    "@storybook/testing-library": "^0.0.13",
+    "@tailwindcss/typography": "^0.5.4"
   }
 }
